@@ -1,0 +1,232 @@
+/* כללי */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    background-color: #1e1e2e;
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* תפריט צדדי */
+.sidebar {
+    width: 250px;
+    background-color: #2e2e3e;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.discord-btn {
+    background-color: #5865f2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.discord-btn:hover {
+    background-color: #4751c9;
+}
+
+.logo img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 15px 0;
+}
+
+nav li a {
+    padding: 10px 15px;
+    display: block;
+    border-radius: 5px;
+    background-color: #3b3b4b;
+    transition: background 0.3s;
+}
+
+nav li a:hover {
+    background-color: #5865f2;
+}
+
+/* תוכן מרכזי */
+main {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.main-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.policy {
+    background-color: #3b3b4b;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.policy h2 {
+    color: #ff4d4d;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.policy p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.payment {
+    background-color: #3b3b4b;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.payment h2 {
+    color: #00ff4c;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.payment p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* אזור החבילות */
+.packages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.package {
+    background-color: #2e2e3e;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: scaleIn 0.5s ease-in-out;
+}
+
+.package img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.package h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.package p {
+    font-size: 16px;
+}
+
+/* כפתור "למידע נוסף" */
+.btn {
+    background-color: #000546;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* עיצוב לתמונות בעמוד המוצר */
+.product-details {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.product-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* רשת גמישה */
+    gap: 20px; /* רווחים בין התמונות */
+    margin-bottom: 20px;
+    justify-items: center; /* ממרכז את התמונות ברשת */
+}
+
+.product-images img {
+    width: 100%;
+    max-width: 200px; /* הגבלת גודל התמונה */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease; /* אפקט hover */
+}
+
+.product-images img:hover {
+    transform: scale(1.05); /* הגדלה קלה בהצבעה על התמונה */
+}
+
+.product-details p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* אנימציות */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
